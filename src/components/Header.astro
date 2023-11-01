@@ -1,0 +1,28 @@
+---
+import BottonHeader from "./ButtonHeader.astro";
+
+interface Props {
+  content: string;
+  info?: string;
+}
+
+const { content, info } = Astro.props;
+---
+
+<header class="py-3 px-4 mx-auto max-w-xl lg:py-10 lg:px-6">
+  <div class="mx-auto text-center mb-8 lg:mb-16">
+    <h2 class="mb-4 text-5xl font-extrabold text-[#f4f4f4] tracking-tight">
+      {content}
+    </h2>
+    <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">
+      {info}
+    </p>
+  </div>
+  <nav
+    class="flex flex-col items-center justify-between w-full text-center md:flex-row"
+  >
+    <BottonHeader href="/" text="Ultimas Fotos" />
+    <BottonHeader href="./about" text="Sobre la Pagina" />
+    <BottonHeader href="./oldest" text="Primeras Fotos" />
+  </nav>
+</header>
