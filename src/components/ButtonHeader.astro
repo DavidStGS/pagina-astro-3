@@ -8,13 +8,17 @@ const { text, href } = Astro.props;
 ---
 
 <a
+  class="flex-row justify-center text-white cursor-pointer hover:bg-[#505050] focus:ring-4 focus:outline-none focus:ring-[#202020]/50 font-semibold text-lg rounded-lg px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#1da1f2]/55 mr-2 mb-2 hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-110 scale-90 gap-x-2 opacity-90 hover:opacity-100"
+  href={href}>{text}</a
+>
+<!-- <a
   href={href}
   style="--spread:90deg;--shimmer-color:#ffffff;--radius:100px;--speed:1.5s;--cut:0.1em;--bg:radial-gradient(ellipse 80% 50% at 50% 120%,rgba(62, 61, 117),rgba(18, 18, 38))"
   class="mr-3 group border border-white/30 relative cursor-pointer overflow-hidden whitespace-nowrap px-6 py-4 [background:var(--bg)] [border-radius:var(--radius)] transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_8px_rgba(62,61,117,0.7)]"
 >
   <div class="absolute inset-0 overflow-visible [container-type:size]">
     <div
-      class="animate-spin_slow absolute inset-0 h-[100cqh] animate-slide [aspect-ratio:1] [border-radius:0] [mask:none]"
+      class="animate-spin_slow absolute inset-0 h-[100cqh] [border-radius:0]"
     >
       <div
         class="absolute inset-[-100%] w-auto rotate-0 [background:conic-gradient(from_calc(270deg-(var(--spread)*0.5)),transparent_0,hsl(0_0%_100%/1)_var(--spread),transparent_var(--spread))] [translate:0_0]"
@@ -31,4 +35,4 @@ const { text, href } = Astro.props;
   >
     {text}
   </div></a
->
+> -->
