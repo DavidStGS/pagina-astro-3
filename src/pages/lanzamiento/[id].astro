@@ -2,7 +2,13 @@
 import { getDataByID } from "../../lib/FetchData";
 import Layout from "../../layouts/Layout.astro";
 import { getData } from "../../lib/FetchData";
-import { lanzamientos } from "../../components/Fotos.astro";
+
+interface Props {
+  success: boolean;
+}
+
+const { success } = Astro.props;
+const sucessText = success ? "Exito" : "Fracaso";
 
 export async function getStaticPaths() {
   const lanzamientos = await getData();
@@ -29,6 +35,17 @@ if (id) {
       alt=""
       transition:name={`imgeffect-${id}`}
     />
+    <header class="p-7 m-auto">
+      <span
+        transition:name={`successffect-${id}`}
+        class={`${
+          success
+            ? " text-center bg-green-300 text-green-700"
+            : "bg-red-400 text-red-700 text-center"
+        } text.xs font-semibold mr-2 px-2.5 py-0.5 rounded`}
+        >{sucessText}
+      </span>
+    </header>
     <h2
       class="m-auto text-2xl font-bold tracking-tight text-gray-900 dark:text-white pb-8"
       transition:name={`titleffect-${id}`}

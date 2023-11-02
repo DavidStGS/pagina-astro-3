@@ -25,6 +25,7 @@ const sucessText = success ? "Exito" : "Fracaso";
   </picture>
   <header class="p-5 flex-grow">
     <span
+      transition:name={`successffect-${id}`}
       class={`${
         success ? "bg-green-300 text-green-700" : "bg-red-400 text-red-700"
       } text.xs font-semibold mr-2 px-2.5 py-0.5 rounded`}>{sucessText}</span
