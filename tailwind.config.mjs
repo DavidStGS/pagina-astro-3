@@ -2,7 +2,11 @@
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
-		extend: {},
+		extend: {
+			animation: {
+				'spin_slow': 'spin 4s linear infinite',
+			  }
+		},
 	},
 	plugins: [],
 }
