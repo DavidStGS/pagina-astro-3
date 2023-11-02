@@ -8,6 +8,7 @@ interface Props {
 }
 
 const { success } = Astro.props;
+
 const sucessText = success ? "Exito" : "Fracaso";
 
 export async function getStaticPaths() {
@@ -39,7 +40,7 @@ if (id) {
       <span
         transition:name={`successffect-${id}`}
         class={`${
-          success
+          lanzamieto?.success
             ? " text-center bg-green-300 text-green-700"
             : "bg-red-400 text-red-700 text-center"
         } text.xs font-semibold mr-2 px-2.5 py-0.5 rounded`}
