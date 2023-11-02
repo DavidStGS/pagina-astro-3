@@ -2,6 +2,7 @@
 import { getDataByID } from "../../lib/FetchData";
 import Layout from "../../layouts/Layout.astro";
 import { getData } from "../../lib/FetchData";
+import { lanzamientos } from "../../components/Fotos.astro";
 
 export async function getStaticPaths() {
   const lanzamientos = await getData();
@@ -35,10 +36,14 @@ if (id) {
       Lanzamiento #{lanzamieto?.flight_number}
     </h2>
     <p
-      class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-center"
-      transition:name={`detailffect-${id}`}
+      class="m-auto font-normal text-gray-700 dark:text-gray-400"
+      transition:name={`detffect-${id}`}
     >
-      {lanzamieto?.details !== null ? lanzamieto?.details : "No hay detalles"}
+      {
+        lanzamieto?.details != null && lanzamieto?.details?.length > 100
+          ? lanzamieto?.details.substring(0, 100) + "..."
+          : lanzamieto?.details ?? "Sin detalles"
+      }
     </p>
   </article>
 </Layout>

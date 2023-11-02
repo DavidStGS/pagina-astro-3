@@ -1,5 +1,4 @@
 ---
-import { ViewTransitions } from "astro:transitions";
 interface Props {
   id: string;
   details: string | null;
@@ -38,7 +37,7 @@ const sucessText = success ? "Exito" : "Fracaso";
     </h2>
     <p
       class="mb-3 font-normal text-gray-700 dark:text-gray-400"
-      transition:name={`datailsffect-${id}`}
+      transition:name={`detffect-${id}`}
     >
       {
         details != null && details?.length > 100
