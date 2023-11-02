@@ -21,8 +21,24 @@ if (id) {
 ---
 
 <Layout title={`Lanzamiento ${id}`}>
-  <article>
-    {lanzamieto?.id}
-    <h1></h1>
+  <article class="flex flex-col justify-center">
+    <img
+      class="mb-12 rounded-t-lg max-w-sm m-auto"
+      src={lanzamieto?.links?.patch.small}
+      alt=""
+      transition:name={`imgeffect-${id}`}
+    />
+    <h2
+      class="m-auto text-2xl font-bold tracking-tight text-gray-900 dark:text-white pb-8"
+      transition:name={`titleffect-${id}`}
+    >
+      Lanzamiento #{lanzamieto?.flight_number}
+    </h2>
+    <p
+      class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-center"
+      transition:name={`detailffect-${id}`}
+    >
+      {lanzamieto?.details !== null ? lanzamieto?.details : "No hay detalles"}
+    </p>
   </article>
 </Layout>

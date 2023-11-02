@@ -1,28 +1,17 @@
-<!-- component --><!-- Foooter -->
+---
+import ButtonFooter from "./ButtonFooter.astro";
+---
+
 <section class="pt-20">
   <div
-    class="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8"
+    class="max-w-screen-xl px-4 pt-12 pb-5 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8"
   >
     <nav class="flex flex-wrap justify-center -mx-5 -my-2">
       <div class="px-5 py-2">
-        <a href="#" class="text-base leading-6 text-white hover:text-gray-500">
-          Inicio
-        </a>
-      </div>
-      <div class="px-5 py-2">
-        <a href="#" class="text-base leading-6 text-white hover:text-gray-500">
-          Sobre a Pagina
-        </a>
-      </div>
-      <div class="px-5 py-2">
-        <a href="#" class="text-base leading-6 text-white hover:text-gray-500">
-          Ultimas Fotos
-        </a>
-      </div>
-      <div class="px-5 py-2">
-        <a href="#" class="text-base leading-6 text-white hover:text-gray-500">
-          Primeras Fotos
-        </a>
+        <ButtonFooter href="/" text="Inicio" />
+        <ButtonFooter href="/about" text="Sobre la Pagina" />
+        <ButtonFooter href="/" text="Ultimas Fotos" />
+        <ButtonFooter href="/" text="Primeras Fotos" />
       </div>
     </nav>
     <div class="flex justify-center mt-8 space-x-6">
