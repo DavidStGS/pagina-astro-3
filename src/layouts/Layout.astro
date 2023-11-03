@@ -2,6 +2,7 @@
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import { ViewTransitions } from "astro:transitions";
+import ScrollerComponent from "../components/componentsReact/slider";
 
 interface Props {
   title: string;
@@ -25,12 +26,13 @@ const { title } = Astro.props;
     <ViewTransitions />
   </head>
   <body class="min-h-0">
-    <main class="max-w-5xl px-3 m-auto">
+    <main class="max-w-6xl px-3 m-auto">
       <Header
         content="App para Visualizar Fotos"
         info="Toda la informacion sobre las fotos"
       />
       <slot />
+      <ScrollerComponent client:visible />
     </main>
     <Footer />
     <style is:global>

@@ -11,40 +11,42 @@ const { id, img, success, flightNumber, details } = Astro.props;
 const sucessText = success ? "Exito" : "Fracaso";
 ---
 
-<a
-  href={`./lanzamiento/${id}`}
-  class="max-w-sm border shadow-sm rounded-lg bg-gray-800 border-gray-700 hover:scale-105 hover:bg-gray-700 hover:border-gray-500 transition flex flex-col h-full"
->
-  <picture class="flex justify-center p-4">
-    <img
-      class="mb-3 rounded-t-lg w-full h-full object-cover"
-      src={img}
-      alt=""
-      transition:name={`imgeffect-${id}`}
-    />
-  </picture>
-  <header class="p-5 flex-grow">
-    <span
-      transition:name={`successffect-${id}`}
-      class={`${
-        success ? "bg-green-300 text-green-700" : "bg-red-400 text-red-700"
-      } text.xs font-semibold mr-2 px-2.5 py-0.5 rounded`}>{sucessText}</span
-    >
-    <h2
-      class="mt-2 mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
-      transition:name={`titleffect-${id}`}
-    >
-      Vuelo #{flightNumber}
-    </h2>
-    <p
-      class="mb-3 font-normal text-gray-700 dark:text-gray-400"
-      transition:name={`detffect-${id}`}
-    >
-      {
-        details != null && details?.length > 100
-          ? details.substring(0, 100) + "..."
-          : details ?? "Sin detalles"
-      }
-    </p>
-  </header>
-</a>
+<>
+  <a
+    href={`./lanzamiento/${id}`}
+    class="max-w-sm border shadow-sm rounded-lg bg-gray-800 border-gray-700 hover:scale-105 hover:bg-gray-700 hover:border-gray-500 transition flex flex-col h-full"
+  >
+    <picture class="flex justify-center p-4">
+      <img
+        class="mb-3 rounded-t-lg"
+        src={img}
+        alt=""
+        transition:name={`imgeffect-${id}`}
+      />
+    </picture>
+    <header class="p-5 flex-grow">
+      <span
+        transition:name={`successffect-${id}`}
+        class={`${
+          success ? "bg-green-300 text-green-700" : "bg-red-400 text-red-700"
+        } text.xs font-semibold mr-2 px-2.5 py-0.5 rounded`}>{sucessText}</span
+      >
+      <h2
+        class="mt-2 mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+        transition:name={`titleffect-${id}`}
+      >
+        Vuelo #{flightNumber}
+      </h2>
+      <p
+        class="mb-3 font-normal text-gray-700 dark:text-gray-400"
+        transition:name={`detffect-${id}`}
+      >
+        {
+          details != null && details?.length > 100
+            ? details.substring(0, 100) + "..."
+            : details ?? "Sin detalles"
+        }
+      </p>
+    </header>
+  </a>
+</>

@@ -3,14 +3,6 @@ import { getDataByID } from "../../lib/FetchData";
 import Layout from "../../layouts/Layout.astro";
 import { getData } from "../../lib/FetchData";
 
-interface Props {
-  success: boolean;
-}
-
-const { success } = Astro.props;
-
-const sucessText = success ? "Exito" : "Fracaso";
-
 export async function getStaticPaths() {
   const lanzamientos = await getData();
 
@@ -26,6 +18,8 @@ let lanzamieto;
 if (id) {
   lanzamieto = await getDataByID({ id });
 }
+
+const sucessText = lanzamieto?.success ? "Exito" : "Fracaso";
 ---
 
 <Layout title={`Lanzamiento ${id}`}>
@@ -58,7 +52,7 @@ if (id) {
       transition:name={`detffect-${id}`}
     >
       {
-        lanzamieto?.details != null && lanzamieto?.details?.length > 100
+        lanzamieto?.details != null && lanzamieto?.details?.length > 10000
           ? lanzamieto?.details.substring(0, 100) + "..."
           : lanzamieto?.details ?? "Sin detalles"
       }
