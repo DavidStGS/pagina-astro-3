@@ -32,6 +32,7 @@ export default function ScrollerComponent() {
       >
         <div className="flex w-max animate-marquee items-stretch gap-[--gap] [animation-direction:reverse] hover:[animation-play-state:paused] scroller__inner">
           <a
+            aria-label="Platzi"
             href="https://platzi.com/"
             target="_blank"
             rel="noopener noreferrer"
@@ -39,13 +40,16 @@ export default function ScrollerComponent() {
           >
             <div className="flex flex-row items-center justify-center w-full h-auto gap-2 text-white transition group-hover:scale-110">
               <img
+                decoding="async"
+                loading="lazy"
                 src="/platzi.webp"
                 alt="Logo de Platzi"
-                className="w-full h-auto"
+                className="w-[130px] h-[50px]"
               />
             </div>
           </a>
           <a
+            aria-label="Github"
             href="https://github.com"
             target="_blank"
             rel="noopener noreferrer"
@@ -96,6 +100,7 @@ export default function ScrollerComponent() {
             </div>
           </a>
           <a
+            aria-label="Autentia"
             href="https://midu.link/autentia"
             target="_blank"
             rel="noopener noreferrer"
@@ -103,13 +108,16 @@ export default function ScrollerComponent() {
           >
             <div className="flex flex-row items-center justify-center w-full h-auto gap-2 text-white transition group-hover:scale-110">
               <img
-                className="w-auto h-full py-20"
+                decoding="async"
+                loading="lazy"
+                className="w-[130px] h-[50px]"
                 src="/autentia.webp"
                 alt="logo de Autentia"
               />
             </div>
           </a>
           <a
+            aria-label="Platzi"
             href="https://platzi.com/"
             target="_blank"
             rel="noopener noreferrer"
@@ -117,13 +125,16 @@ export default function ScrollerComponent() {
           >
             <div className="flex flex-row items-center justify-center w-full h-auto gap-2 text-white transition group-hover:scale-110">
               <img
+                decoding="async"
+                loading="lazy"
                 src="/platzi.webp"
                 alt="Logo de Platzi"
-                className="w-full h-auto"
+                className="w-[130px] h-[50px]"
               />
             </div>
           </a>
           <a
+            aria-label="Github"
             href="https://github.com"
             target="_blank"
             rel="noopener noreferrer"
@@ -174,6 +185,7 @@ export default function ScrollerComponent() {
             </div>
           </a>
           <a
+            autentiaria-label="Autentia"
             href="https://midu.link/autentia"
             target="_blank"
             rel="noopener noreferrer"
@@ -181,7 +193,9 @@ export default function ScrollerComponent() {
           >
             <div className="flex flex-row items-center justify-center w-full h-auto gap-2 text-white transition group-hover:scale-110">
               <img
-                className="w-auto h-full py-20"
+                decoding="async"
+                loading="lazy"
+                className="w-[130px] h-[50px]"
                 src="/autentia.webp"
                 alt="logo de Autentia"
               />

@@ -25,7 +25,7 @@ const { title } = Astro.props;
     <title>{title}</title>
     <ViewTransitions />
   </head>
-  <body class="min-h-0">
+  <body class="min-h-0 font-inter">
     <main class="max-w-6xl px-3 m-auto">
       <Header
         content="App para Visualizar Fotos"
@@ -36,8 +36,14 @@ const { title } = Astro.props;
     </main>
     <Footer />
     <style is:global>
+      @font-face {
+        font-family: "Inter-Bold";
+        src: url("/fonts/Inter-Bold.woff2") format("woff2");
+        font-weight: bold;
+        font-style: bold;
+        font-display: swap;
+      }
       html {
-        font-family: system-ui, sans-serif;
         background: #1c2029;
         background-size: 224px;
         color-scheme: dark light;

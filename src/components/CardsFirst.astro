@@ -18,7 +18,8 @@ const sucessText = success ? "Exito" : "Fracaso";
   >
     <picture class="flex justify-center p-4">
       <img
-        class="mb-3 rounded-t-lg"
+        fetchpriority="high"
+        class="rounded-t-lg w-52 h-52"
         src={img}
         alt=""
         transition:name={`imgeffect-${id}`}
@@ -28,7 +29,9 @@ const sucessText = success ? "Exito" : "Fracaso";
       <span
         transition:name={`successffect-${id}`}
         class={`${
-          success ? "bg-green-300 text-green-700" : "bg-red-400 text-red-700"
+          success
+            ? "bg-[#0A4D25] text-[#86EFAC]"
+            : "bg-[#6E0707] text-[#FFBDBD]"
         } text.xs font-semibold mr-2 px-2.5 py-0.5 rounded`}>{sucessText}</span
       >
       <h2
