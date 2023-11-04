@@ -3,9 +3,15 @@ import { getDataByID } from "../../lib/FetchData";
 import Layout from "../../layouts/Layout.astro";
 import { getDataFirst } from "../../lib/FetchData";
 
-const { id } = Astro.params;
+export async function getStaticPaths() {
+  const lanzamientos = await getDataFirst(70);
 
-export const prerender = false;
+  return lanzamientos.map((lanzamiento) => ({
+    params: { id: lanzamiento.id },
+  }));
+}
+
+const { id } = Astro.params;
 
 let lanzamieto;
 
