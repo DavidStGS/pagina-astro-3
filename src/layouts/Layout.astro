@@ -27,10 +27,7 @@ const { title } = Astro.props;
   </head>
   <body class="min-h-0 font-inter">
     <main class="max-w-6xl px-3 m-auto">
-      <Header
-        content="View Photos of Launches"
-        info="All Information About the Photos"
-      />
+      <Header />
       <slot />
       <ScrollerComponent client:visible />
     </main>
